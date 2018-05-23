@@ -27,7 +27,7 @@ output: html_document
 
 
 
-![](C:\Users\emart\Documents\Data.Miami\ProfHeadShot.png)  
+![](https://github.com/egmkrco/data-science-class/raw/master/ProfHeadShot.png)  
  
 
 ```{r}
