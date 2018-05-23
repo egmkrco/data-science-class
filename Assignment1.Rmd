@@ -1,8 +1,47 @@
 ---
 title: "Assignment 1"
-author: 'Eileen Martin'
 output: html_document
 ---
 
+## Eileen Martin
 
+## Professional Background
+
+* Help Desk Specialist, Kaufman Rossin,  1991 - 1995
+
+* Network Administrator, Kaufman Rossin, 1996 - 2000
+
+* Database Administrator, Kaufman Rossin, 2001 - 2008
+
+* Database Manager, Kaufman Rossin, 2009 - 2016
+
+* Director of Data, Kaufman Rossin, 2017 - Present
+
+## Skills
+
+* SQL, SharePoint Development, MS Access Development, Visual Studio Development, Business Analytics
+
+## Interests
+
+* Traveling, Art, Movies
+
+
+
+![](C:\Users\emart\Documents\Data.Miami\ProfHeadShot.png)  
+ 
+
+```{r}
+# I'm learning data science! YAY!
+```
+
+
+
+
+
+
+
+
+```{r}
+
+```
 
