@@ -1,0 +1,158 @@
+---
+title: "Descriptive Statistics Assignment"
+author: "Eileen"
+output:
+  html_notebook:
+    theme: lumen
+  html_document:
+    df_print: paged
+---
+
+#Your turn!
+We went through some exploratory analysis on our own, which will help us answer some questions in the data, and will actually give us more questions! Now pick another dataset from `mlbench` and create a markdown notebook of you exploring the data, following the same 5 steps.
+
+1. Take a glimpse at your data
+2. Look at the dimensions of your data
+3. Look at the class types of your data
+4. Distribution of your data
+5. Correlations in your data
+---
+
+Load mlbench and tidyverse
+```{r}
+install.packages("mlbench")
+install.packages("tidyverse")
+install.packages("Hmisc")
+```
+The package `mlbench` has a bunch of datasets that you can use to explore and build machine learning models on. 
+
+Select the dataset you'll work with and load it using `data()`
+
+```{r}
+library(mlbench)
+library(tidyverse)
+library(Hmisc)
+```
+
+```{r}
+data("women")
+```
+
+> Since we aren't familiar with the variables in this data, we should probably keep the explanation of these variables handy
+
+## Explore!
+1. **Take a glimpse of your data.**
+```{r}
+#view the first 6 rows
+head(women)
+```
+2. **Look at the dimensions of your data.**
+```{r}
+#dimensions
+dim(women)
+```   
+    
+3. **Look at the class types of each variable in your data.**
+```{r}
+#class types
+str(women)
+```
+4. **Distribution of your data**
+```{r}
+#distributions
+summary(BostonHousing2)
+```
+
+5. **Correlations in your data**
+
+```{r}
+#try the pairs() function or the cor() function from the corrplot package.  
+describe(women)
+
+
+```
+```{r}
+hist(women$height)
+```
+```{r}
+hist(women,20)
+```
+```{r}
+hist(women$height,50)
+```
+```{r}
+boxplot(women$height)
+```
+```{r}
+head(women, n=10L)
+```
+```{r}
+hist(women$weight)
+```
+```{r}
+bh_explore <- subset.data.frame(women, select = c(height,weight))
+```
+
+```{r}
+pairs(bh_explore)
+```
+```{r}
+install.packages("corrplot")
+```
+```{r}
+library(corrplot)
+```
+```{r}
+correlations <- cor(bh_explore)
+```
+```{r}
+corrplot(correlations,method="circle")
+```
+```{r}
+plot(x=women$height, y=women$weight)
+```
+```{r}
+data(Zoo)
+head(Zoo, n=10L)
+```
+```{r}
+dim(Zoo)
+summary(Zoo)
+```
+```{r}
+mean(Zoo$feathers)
+table(Zoo$feathers)
+```
+```{r}
+data(Glass)
+summary(Glass)
+```
+```{r}
+head(Glass)
+```
+```{r}
+Glass[,-10]
+```
+```{r}
+correlations <- cor(Glass[,-10])
+```
+```{r}
+corrplot(correlations,method="circle")
+```
+```{r}
+install.packages("swirl")
+```
+```{r}
+library(swirl)
+ls()
+swirl()
+```
+```{r}
+
+```
+
+>Explain these correlations is simple terms based on what you know that the variables represent.
+```{r}
+
+```
+
